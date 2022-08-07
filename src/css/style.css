@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --txt-color: #ffffff;
+  --main-color: #3a4764;
+  --background-color: #232c43;
+  --screen-color: #182034;
+  --del-color: #637097;
+  --del-box-shadow: #404e72;
+  --del-hover-color: #a2b2e1;
+  --red-color: #d03f2f;
+  --red-box-shadow: #93261a;
+  --red-hover-color: #f96b5b;
+  --btn-color: #434a59;
+  --btn-color-hover: #ffffff;
+  --btn-box-shadow: #b4a597;
+  --btn-background: #eae3dc;
+  --del-reset-equal-color: #ffffff;
+  --equal-color: #fff;
+}
+
+html {
+  font-size: 10px;
+  font-family: "League Spartan", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--main-color);
+}
+
+#container {
+  position: relative;
+  padding: 2em;
+  width: 54em;
+  height: 70.6em;
+  cursor: pointer;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3em;
+  color: var(--txt-color);
+}
+h2 {
+  font-size: 1.5em;
+  margin-top: 1em;
+  color: var(--txt-color);
+}
+
+.display-2 {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+.theme-number > label {
+  margin: 0.9em;
+  color: var(--txt-color);
+}
+
+.theme-choice {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 2em;
+  border-radius: 1em;
+  background-color: var(--background-color);
+}
+.theme-choice > input {
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  transition: 1s;
+  appearance: none;
+}
+
+#theme-1:checked {
+  background: #d03f2f;
+}
+#theme-2:checked {
+  background: #ca5502;
+}
+#theme-3:checked {
+  background: #00e0d1;
+}
+
+.screen {
+  width: 100%;
+  height: 2em;
+  margin-top: 0.2em;
+  color: var(--txt-color);
+  background-color: var(--screen-color);
+  border: none;
+  border-radius: 0.2em;
+  text-align: right;
+  font-size: 5em;
+  font-weight: 700;
+  padding-right: 0.3em;
+  padding: 40px 32px 36px 0;
+  overflow: hidden;
+}
+
+.num-pad {
+  font-size: 2rem;
+  font-weight: 700;
+  height: 25em;
+  text-align: center;
+  margin-top: 1em;
+  background-color: var(--background-color);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 1em;
+  grid-row-gap: 1.9em;
+  padding: 1em;
+  border-radius: 0.5em;
+}
+.btn {
+  box-shadow: 0 0.15em 0 var(--btn-box-shadow);
+  font-size: 3.2rem;
+  border-radius: 0.3em;
+  background-color: var(--btn-background);
+  color: var(--btn-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  font-weight: 700;
+}
+
+button:hover {
+  background-color: var(--btn-color-hover);
+}
+
+#del,
+#reset {
+  box-shadow: 0px 0.15em 0px var(--del-box-shadow);
+  background-color: var(--del-color);
+  color: var(--del-reset-equal-color);
+  font-size: 2.2rem;
+}
+
+#del:hover,
+#reset:hover {
+  background-color: var(--del-hover-color);
+}
+
+#reset {
+  grid-area: 5 / 1 / 6 / 3;
+}
+#equal {
+  box-shadow: 0 0.15em 0 var(--red-box-shadow);
+  background-color: var(--red-color);
+  color: var(--equal-color);
+  grid-area: 5 / 3 / 6 / 5;
+  font-size: 2.2rem;
+}
+#equal:hover {
+  background-color: var(--red-hover-color);
+}
+
+/* Mobile View */
+
+@media screen and (max-width: 500px) {
+  #container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+  }
+  .num-pad {
+    margin-top: 0;
+    height: 70%;
+    font-size: 20px;
+    grid-column-gap: 0.5em;
+    grid-row-gap: 1em;
+  }
+  .num-pad > button {
+    height: 100%;
+  }
+  .screen {
+    padding-top: 8%;
+    margin-top: 0;
+    font-size: 5rem;
+  }
+
+  #del,
+  #reset {
+    font-size: 20px;
+    font-weight: 700;
+  }
+}

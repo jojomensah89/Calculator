@@ -1,26 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Calculator app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="src/css/style.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Calculator app</title>
+  </head>
+  <body id="body">
+    <main id="container">
+      <section id="header">
+        <h1>calc</h1>
 
+        <div class="display-2">
+          <h2>THEME</h2>
 
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+          <div class="theme">
+            <div class="theme-number">
+              <label for="theme-1">1</label>
+
+              <label for="theme-2">2</label>
+
+              <label for="theme-3">3</label>
+            </div>
+
+            <div class="theme-choice">
+              <input type="radio" id="theme-1" name="theme" value="1" checked />
+
+              <input type="radio" id="theme-2" name="theme" value="2" />
+
+              <input type="radio" id="theme-3" name="theme" value="3" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div id="display" class="screen"></div>
+
+      <section class="num-pad">
+        <button class="btn">7</button>
+        <button class="btn">8</button>
+        <button class="btn">9</button>
+        <button id="del" class="btn unique">DEL</button>
+        <button class="btn">4</button>
+        <button class="btn">5</button>
+        <button class="btn">6</button>
+        <button class="btn">+</button>
+        <button class="btn">1</button>
+        <button class="btn">2</button>
+        <button class="btn">3</button>
+        <button class="btn">-</button>
+        <button class="btn">.</button>
+        <button class="btn">0</button>
+        <button class="btn">/</button>
+        <button class="btn">*</button>
+        <button id="reset" class="btn unique">RESET</button>
+        <button id="equal" class="btn unique">=</button>
+      </section>
+    </main>
+    <script type="module" src="src/scripts/calculator.js"></script>
+    <script type="module" src="src/scripts/themechoice.js"></script>
+  </body>
 </html>
