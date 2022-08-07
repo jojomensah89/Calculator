@@ -10,7 +10,7 @@ buttons.map((button) => {
             case "=":
                 try {
                     input.innerText = eval(input.innerText);
-                    text.innerText = "";
+                  
                 } catch {
                     input.innerText = "Error";
                 }
