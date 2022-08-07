@@ -9,8 +9,8 @@ buttons.map((button) => {
                 break;
             case "=":
                 try {
-                    input.innerText = eval(text.innerText + input.innerText);
-                    text.innerText = "";
+                    input.innerText = eval(input.innerText);
+
                 } catch {
                     input.innerText = "Error";
                 }
