@@ -114,7 +114,7 @@ h2 {
   font-weight: 700;
   padding-right: 0.3em;
   padding: 40px 32px 36px 0;
-/*   overflow: hidden; */
+  overflow: hidden; 
    word-wrap: break-word;
 }
 
