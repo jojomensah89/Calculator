@@ -115,7 +115,7 @@ h2 {
   padding-right: 0.3em;
   padding: 40px 32px 36px 0;
   overflow: hidden; 
-   word-wrap: break-word;
+/*    word-wrap: break-word; */
 }
 
 .num-pad {
